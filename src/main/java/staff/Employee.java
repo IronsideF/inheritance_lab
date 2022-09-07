@@ -29,7 +29,7 @@ public abstract class Employee {
 
     public void setName(String name) {
         if (name!=null) {
-            Pattern namePattern = Pattern.compile("[a-zA-Z]+");
+            Pattern namePattern = Pattern.compile("^[A-Z][a-zA-Z]\\w+");
             Matcher nameMatcher = namePattern.matcher(name);
             this.name = nameMatcher.matches() ? name : this.name;
         }
